@@ -20,6 +20,7 @@ export type RenderProps = {
   underlineColorAndroid?: string;
   style: any;
   multiline?: boolean;
+  rtl?: boolean;
   numberOfLines?: number;
   value?: string;
   adjustsFontSizeToFit?: boolean;
