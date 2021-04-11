@@ -30,6 +30,7 @@ export type TextInputProps = React.ComponentPropsWithRef<
    * This component render TextInputOutlined or TextInputFlat based on that props
    */
   mode?: 'flat' | 'outlined';
+  rtl?: boolean;
   left?: React.ReactNode;
   right?: React.ReactNode;
   /**
