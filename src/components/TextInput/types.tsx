@@ -24,7 +24,6 @@ export type RenderProps = {
   numberOfLines?: number;
   value?: string;
   adjustsFontSizeToFit?: boolean;
-  rtl?:boolean;
 };
 type TextInputTypesWithoutMode = $Omit<TextInputProps, 'mode'>;
 export type State = {
