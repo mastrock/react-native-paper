@@ -356,7 +356,7 @@ class TextInputFlat extends React.Component<ChildTextInputProps> {
                 textAlignVertical: multiline ? 'top' : 'center',
                 textAlign: textAlign
                   ? textAlign
-                  : I18nManager.isRTL
+                  : rtl
                   ? 'right'
                   : 'left',
               },
