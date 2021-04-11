@@ -4,7 +4,6 @@ import {
   Animated,
   TextInput as NativeTextInput,
   StyleSheet,
-  I18nManager,
   Platform,
   TextStyle,
 } from 'react-native';
@@ -66,6 +65,7 @@ class TextInputFlat extends React.Component<ChildTextInputProps> {
       underlineColor,
       dense,
       style,
+      rtl,
       theme,
       render,
       multiline,
@@ -174,9 +174,9 @@ class TextInputFlat extends React.Component<ChildTextInputProps> {
     const labelHalfHeight = labelHeight / 2;
 
     const baseLabelTranslateX =
-      (I18nManager.isRTL ? 1 : -1) *
+      (rtl ? 1 : -1) *
         (labelHalfWidth - (labelScale * labelWidth) / 2) +
-      (1 - labelScale) * (I18nManager.isRTL ? -1 : 1) * paddingLeft;
+      (1 - labelScale) * (rtl ? -1 : 1) * paddingLeft;
 
     const minInputHeight = dense
       ? (label ? MIN_DENSE_HEIGHT_WL : MIN_DENSE_HEIGHT) -
